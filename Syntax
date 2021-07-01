@@ -1,0 +1,25 @@
+--Basic Syntax for SQL
+
+SELECT
+  field1
+  
+FROM
+   table
+   
+ WHERE
+    field1 = condition;
+    
+    
+ SELECT * -- Denotes All  Columns
+ 
+SELECT
+  City
+  
+FROM
+   Texas
+   
+ WHERE
+    Population > 80000;
+    
+    
+    
