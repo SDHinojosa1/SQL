@@ -1,28 +1,41 @@
---Basic Syntax for SQL
-
+--Basic Syntax for SQL Example 1
 SELECT
   field1
-  
 FROM
    table
-   
- WHERE
-    field1 = condition;
+WHERE
+   field1 = condition;
+
+--Basic Full Syntax
+SELECT 
+	  COLUMN_NAME(S)
+FROM
+	  TABLE_NAME
+WHERE
+	  CONDITION
+GROUP BY
+	  COLUMN_NAME(S)
+HAVING
+	  AGGREGATE_CONDITION
+ORDER BY
+	  COLUMN_NAME
+LIMIT
+	  N
+
     
-    
- SELECT * -- Denotes All  Columns
+--Select All Columns 
+SELECT * -- Denotes All  Columns
  
+--Query for Texas Cities with Pop>80k
 SELECT
   City
-  
 FROM
    Texas
-   
- WHERE
+WHERE
     Population > 80000;
     
     
---Example for SES and Vaccine Status of Texas Counties
+--Query for SES and Vaccine Rate of Texas Counties
 SELECT
     County_Name,
     Population,
@@ -31,5 +44,3 @@ FROM
     Texas_Counties
 WHERE
     Vaccination_Rate > 0.4;
-
-
