@@ -22,4 +22,14 @@ FROM
     Population > 80000;
     
     
-    
+--Example for SES and Vaccine Status of Texas Counties
+SELECT
+    County_Name,
+    Population,
+    Median_Income
+FROM
+    Texas_Counties
+WHERE
+    Vaccination_Rate > 0.4;
+
+
