@@ -1,0 +1,29 @@
+## Bicycle Data Practice
+
+SELECT 
+
+   end_station_name 
+
+FROM 
+
+   `bigquery-public-data.london_bicycles.cycle_hire`;
+   
+   
+   SELECT 
+
+    COUNT(*) AS num_of_trips 
+
+FROM 
+
+    `bigquery-public-data.london_bicycles.cycle_hire` 
+
+WHERE 
+
+    duration >= 1200;
+    
+SELECT
+     end_station_name
+FROM
+    `bigquery-public-data.london_bicycles.cycle_hire` 
+WHERE
+     rental_id = 57635395;
