@@ -1,26 +1,20 @@
 ## Bicycle Data Practice
 
+## Table and Column Selection
 SELECT 
-
    end_station_name 
-
 FROM 
-
    `bigquery-public-data.london_bicycles.cycle_hire`;
    
-   
-   SELECT 
-
+## Number of Trips Query
+SELECT 
     COUNT(*) AS num_of_trips 
-
 FROM 
-
     `bigquery-public-data.london_bicycles.cycle_hire` 
-
 WHERE 
-
     duration >= 1200;
-    
+
+## Station Query
 SELECT
      end_station_name
 FROM
