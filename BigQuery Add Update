@@ -1,11 +1,13 @@
 ##Query Example for Adding Data
 
 INSERT INTO `us_survey_project.texas_survey_data.travel_survey`
-    (customer_id, address, city, zipcode, country)
+    (customer_id, address, city, zipcode, state, country)
 VALUES
     (8596, '3450 Market Rd', 'Austin', 'TX', 73301, 'US')
 
+
 ##Query Example for Updating Data
+
 UPDATE `us_survey_project.texas_survey_data.travel_survey`
 SET address = '1742 Lucky Ave'
 WHERE customer_id = 7855
