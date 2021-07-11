@@ -21,3 +21,11 @@ FROM
     `bigquery-public-data.london_bicycles.cycle_hire` 
 WHERE
      rental_id = 57635395;
+
+
+
+## Distinct Query
+SELECT
+     DISTINCT rental_id
+FROM
+    `bigquery-public-data.london_bicycles.cycle_hire`
