@@ -29,3 +29,9 @@ SELECT
      DISTINCT rental_id
 FROM
     `bigquery-public-data.london_bicycles.cycle_hire`
+
+## Query for String Length
+SELECT
+     LENGTH(end_station_name) AS end_station_length
+FROM
+    `bigquery-public-data.london_bicycles.cycle_hire` 
