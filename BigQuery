@@ -35,3 +35,12 @@ SELECT
      LENGTH(end_station_name) AS end_station_length
 FROM
     `bigquery-public-data.london_bicycles.cycle_hire` 
+    
+    
+## Query for Station Length Name <10 Characters
+SELECT
+     end_station_name
+FROM
+    `bigquery-public-data.london_bicycles.cycle_hire` 
+WHERE
+    LENGTH(end_station_name) <10
