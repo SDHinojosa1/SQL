@@ -30,3 +30,10 @@ FROM
     `us_survey_project.texas_survey_data.travel_survey`
 WHERE
     state = 'CA'
+
+
+## Query Example for COALESCE
+SELECT
+    CONCAT(zip, city) AS location
+FROM
+    `us_survey_project.texas_survey_data.travel_survey`
