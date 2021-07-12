@@ -37,3 +37,14 @@ SELECT
     CONCAT(zip, city) AS location
 FROM
     `us_survey_project.texas_survey_data.travel_survey`
+    
+
+## Cleaning Misspellings in Data
+SELECT
+    customer_id
+        WHEN city = 'McCallen' THEN 'McAllen'
+        WHEN city = 'MacAllen' THEN 'McAllen'
+        ELSE city
+        END AS cleaned_city
+FROM
+    `us_survey_project.texas_survey_data.travel_survey`
