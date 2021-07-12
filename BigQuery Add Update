@@ -18,9 +18,9 @@ WHERE
 UPDATE
     `us_survey_project.texas_survey_data.travel_survey`
 SET
-    state = "TX"
+    state = 'TX'
 WHERE
-    state = "XT";
+    state = 'XT;
 
 
 ## Query Example for CONCAT
@@ -29,4 +29,4 @@ SELECT
 FROM
     `us_survey_project.texas_survey_data.travel_survey`
 WHERE
-    state = "CA"
+    state = 'CA'
