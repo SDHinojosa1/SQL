@@ -72,3 +72,12 @@ FROM
     `bigquery-public-data.london_bicycles.cycle_hire` 
 ORDER BY
     duration DESC
+
+
+## Typecasting Data
+SELECT
+     CAST(duration AS FLOAT64)
+FROM
+    `bigquery-public-data.london_bicycles.cycle_hire` 
+ORDER BY
+    CAST(duration AS FLOAT64) DESC
