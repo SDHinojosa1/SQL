@@ -20,7 +20,7 @@ UPDATE
 SET
     state = 'TX'
 WHERE
-    state = 'XT;
+    state = 'XT';
 
 
 ## Query Example for CONCAT
