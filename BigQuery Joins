@@ -1,0 +1,28 @@
+## Left Join
+
+SELECT
+  clinic.lot_id, 
+  CONCAT(clinic.city, ': ', clinic.clinic_alias) AS clinic_name;
+  COUNT(covid.doses_given) AS doses,
+  (SELECT
+  COUNT(*)
+  FROM vaccine_types.clinic AS clinic)
+ AS total_doses,
+ CASE   
+    WHEN COUNT(covid.doses_given)/(SELECT COUNT(*) FROM vaccine_types.clinic AS clinic) <= 50
+    THEN 'vaccinations give 0-50% of doses'
+    WHEN COUNT(covid.doses_given)/(SELECT COUNT(*) FROM vaccine_types.clinic AS clinic) <= 50
+    THEN 'vaccinations give 0-50% of doses'
+    WHEN COUNT(covid.doses_given)/(SELECT COUNT(*) FROM vaccine_types.clinic AS clinic) > 50
+    AND COUNT(covid.doses_given)/(SELECT COUNT(*) FROM vaccine_types.clinic AS clinic) <= 99
+    THEN 'vaccinations give 51-99% of doses'
+  ELSE 'vaccinations give 100% of doses'
+  END AS 'vaccination_summary'
+FROM vaccine_types.clinic AS clinic
+LEFT JOIN vaccine_types.covid AS covid
+  ON covid.lot_id = clinic.lot_id 
+GROUP BY 
+  clinic.clinic_id, 
+  clinic_name
+HAVING
+  COUNT(covid.lot_id >0)
