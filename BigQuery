@@ -102,8 +102,11 @@ LIMIT 10
 
 ## Count Distinct and Inner Join
 SELECT
+     new_york.citi_blocks AS blocks
      COUNT(DISTINCT new_york.citibike_trips) AS num_trips
 FROM
-    new_york.citibike_trips AS city_bike 
+     new_york.citibike_trips AS city_bike 
 INNERJOIN
-    new_york.citiwalking_trips AS city_walk ON city_bike.person_id = city_walk.person_id
+     new_york.citiwalking_trips AS city_walk ON city_bike.person_id = city_walk.person_id
+GROUP BY
+     new_york.citi_blocks
