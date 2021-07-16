@@ -26,3 +26,14 @@ GROUP BY
   clinic_name
 HAVING
   COUNT(covid.lot_id >0)
+
+
+
+## Subquery Example
+SELECT vaccine_types.*
+  FROM (
+        SELECT *
+          FROM clinic.facility
+        WHERE age_group = 'Pediatric'
+       ) vaccine_types
+WHERE vaccine_types.brand = 'Pfizer'
