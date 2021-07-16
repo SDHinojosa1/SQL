@@ -98,3 +98,12 @@ GROUP BY
 ORDER BY
     num_trips DESC
 LIMIT 10
+
+
+## Count Distinct and Inner Join
+SELECT
+     COUNT(DISTINCT new_york.citibike_trips) AS num_trips
+FROM
+    new_york.citibike_trips AS city_bike 
+INNERJOIN
+    new_york.citiwalking_trips AS city_walk ON city_bike.person_id = city_walk.person_id
