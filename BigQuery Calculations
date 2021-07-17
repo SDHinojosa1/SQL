@@ -1,0 +1,5 @@
+SELECT
+  test_score_a,
+  test_score_b,
+  test_score_a + test_score_b AS total_score
+  
