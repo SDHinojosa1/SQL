@@ -44,3 +44,9 @@ WITH large_vaccine_clinics AS (
   vaccine_given > 10000
   
   )
+
+## Count How Many Large Vaccine Clinics
+SELECT 
+  COUNT(*) AS cnt
+FROM
+  large_vaccine_clinics
