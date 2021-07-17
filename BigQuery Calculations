@@ -34,3 +34,13 @@ GROUP BY
   year
 ORDER BY
   year DESC
+
+## Temporary Table
+WITH large_vaccine_clinics AS (
+  SELECT *
+  FROM 
+   vaccinate_data.texas_vaccine_data
+  WHERE
+  vaccine_given > 10000
+  
+  )
