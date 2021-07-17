@@ -13,3 +13,11 @@ SELECT
   (test_score_a + test_score_b) * score_weight AS total_points
 FROM
   testing_records
+
+## Dividing Vaccines per Clinic
+SELECT
+  vaccine_doses,
+  number_of_clinics,
+  vaccine_doses/number_of_clinics AS doses_per_clinic
+FROM
+  vaccinations
