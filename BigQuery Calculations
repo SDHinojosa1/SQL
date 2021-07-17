@@ -21,3 +21,5 @@ SELECT
   vaccine_doses/number_of_clinics AS doses_per_clinic
 FROM
   vaccinations
+WHERE
+  doses_per_clinic <> 0
