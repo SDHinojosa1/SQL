@@ -1,5 +1,15 @@
+## Adding Test Scores
 SELECT
   test_score_a,
   test_score_b,
   test_score_a + test_score_b AS total_score
+FROM
+  testing_records
   
+## Calculating Weighted Grade
+SELECT
+  test_score_a,
+  test_score_b,
+  (test_score_a + test_score_b) * score_weight AS total_points
+FROM
+  testing_records
